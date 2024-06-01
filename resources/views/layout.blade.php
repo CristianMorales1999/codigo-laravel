@@ -15,8 +15,8 @@
             <li><a href="contacto">Contacto</a></li>
         </ul>
     </nav>
-</body>
 
-<!-- Agregamos la directiva para agregar contenido dinamico-->
-@yield('content')
+    <!-- Agregamos la directiva para agregar contenido dinamico-->
+    @yield('content')
+</body>
 </html>
