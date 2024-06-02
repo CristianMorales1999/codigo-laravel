@@ -12,14 +12,14 @@
             text-decoration: underline;
         }
     </style>
-    
+
 </head>
 <body>
     <nav>
         <table class="table">
             <thead class="table table-bordered">
                 <tr>
-                    <th scope="col" class="activo"><a href="/">Home</a></th>
+                    <th scope="col" class="{{ request()->routeIs('home')? 'activo':''}}"><a href="/">Home</a></th>
                     <th scope="col"><a href="nosotros">Nosotros</a></th>
                     <th scope="col"><a href="servicios">Servicios</a></th>
                     <th scope="col"><a href="contacto">Contacto</a></th>
