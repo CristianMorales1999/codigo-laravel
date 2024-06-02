@@ -18,3 +18,5 @@ Route::view('nosotros','nosotros')->name('nosotros');
 Route::get('servicios','App\Http\Controllers\ServiciosController@index')->name('servicios');
 Route::view('contacto','contacto')->name('contacto');
 
+//Generar las 7 rutas de los metodos del controlador
+Route::resource('servicios','App\Http\Controllers\ServiciosController');
