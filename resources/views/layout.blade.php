@@ -5,15 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .activo a{
+            color:red;
+            text-decoration: underline;
+        }
+    </style>
+    
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="/"></a>Home</li>
-            <li><a href="nosotros">Nosotros</a></li>
-            <li><a href="servicios">Servicios</a></li>
-            <li><a href="contacto">Contacto</a></li>
-        </ul>
+        <table class="table">
+            <thead class="table table-bordered">
+                <tr>
+                    <th scope="col" class="activo"><a href="/">Home</a></th>
+                    <th scope="col"><a href="nosotros">Nosotros</a></th>
+                    <th scope="col"><a href="servicios">Servicios</a></th>
+                    <th scope="col"><a href="contacto">Contacto</a></th>
+                </tr>
+            </thead>
+        </table>
     </nav>
 
     <!-- Agregamos la directiva para agregar contenido dinamico-->
