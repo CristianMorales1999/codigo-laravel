@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 
     <style>
         .activo a{
@@ -18,9 +20,7 @@
     <nav>
         <table class="table">
             @include('partials.nav')
-        </table>
-        <!-- Agregamos la directiva para agregar contenido dinamico-->
-        @yield('content')
+        </table>        
     </nav> 
 </body>
 </html>
