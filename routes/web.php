@@ -15,7 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/','home')->name('home');
 Route::view('nosotros','nosotros')->name('nosotros');
-Route::get('servicios','App\Http\Controllers\ServiciosController@index')->name('servicios');
+Route::get('servicios','App\Http\Controllers\ServiciosController@index')->name('servicios.index');
+
+Route::get('servicios/{id}','App\Http\Controllers\ServiciosController@show')->name('servicios.show');
+
 Route::view('contacto','contacto')->name('contacto');
 
 //Generar las 7 rutas de los metodos del controlador
@@ -28,3 +31,4 @@ Route::resource('servicios','App\Http\Controllers\ServiciosController');
 //Si queremos registrar todos los metodos del controlador menos algunos en especifico
 //Utizamos el metodo except() para elegir cual método no quiero que se registre
 /*Route::resource('servicios','App\Http\Controllers\ServiciosController')->only('index','show');*/
+
