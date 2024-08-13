@@ -55,10 +55,20 @@ class ServiciosController extends Controller
             ]
         );
         */
-        //Opcion 2 de Insercion
+        /*
+        //Opcion 2 de Insercion (En el caso de tener los mismo nombres de campo que tenemos en el formulario)
         Servicio::create(request()->all());
+        */
 
-        
+        //Opcion 03: Validando campos
+        $camposv=request()->validate(
+            [
+                'titulo'=>'required',
+                'descripcion'=>'required'
+            ]
+        );
+        Servicio::create($camposv);
+
         return redirect()->route('servicios.index');
     }
 

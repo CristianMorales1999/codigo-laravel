@@ -8,5 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Servicio extends Model
 {
     //use HasFactory;
-    protected $fillable=['titulo','descripcion'];
+    //protected $fillable=['titulo','descripcion'];
+    //Validando campos
+    protected $guarded=[];
 }
