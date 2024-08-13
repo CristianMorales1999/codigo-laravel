@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::view('/','home')->name('home');
 Route::view('nosotros','nosotros')->name('nosotros');
 Route::get('servicios','App\Http\Controllers\ServiciosController@index')->name('servicios.index');
-
+Route::get('servicios/create','App\Http\Controllers\ServiciosController@create')->name('servicios.create');
+Route::post('servicios','App\Http\Controllers\ServiciosController@store')->name('servicios.store');
 Route::get('servicios/{id}','App\Http\Controllers\ServiciosController@show')->name('servicios.show');
 
 Route::view('contacto','contacto')->name('contacto');

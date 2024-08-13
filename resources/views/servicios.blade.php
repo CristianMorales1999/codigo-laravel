@@ -6,6 +6,12 @@
     <h2>Servicios</h2>
 
     <tr>
+        <td colspan="4" class="servicios">
+            <a href="{{route('servicios.create')}}">Nuevo Servicio</a>
+        </td>
+    </tr>
+    
+    <tr>
         @if($servicios)
             @foreach($servicios as $servicio)
                 <td class="servicios" colspan="2"><a href="{{route('servicios.show',$servicio)}}">{{$servicio->titulo}}</a></td>

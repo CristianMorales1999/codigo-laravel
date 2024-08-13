@@ -34,6 +34,7 @@ class ServiciosController extends Controller
     public function create()
     {
         //
+        return view('create');
     }
 
     /**
@@ -41,7 +42,24 @@ class ServiciosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        /*//Opcion 01 de Insercion
+        //Recogemos las variables
+        $titulo=request('titulo');
+        $descripcion=request('descripcion');
+
+        //Almacenamos en la BD usando el modelo Servicio
+        Servicio::create(
+            [
+                'titulo'=>$titulo,
+                'descripcion'=>$descripcion
+            ]
+        );
+        */
+        //Opcion 2 de Insercion
+        Servicio::create(request()->all());
+
+        
+        return redirect()->route('servicios.index');
     }
 
     /**

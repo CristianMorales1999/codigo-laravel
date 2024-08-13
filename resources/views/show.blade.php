@@ -16,4 +16,9 @@
 <tr>
     <td colspan="4" align="center">{{$servicio->created_at->diffForHumans()}}</td>
 </tr>
+<tr>
+    <td colspan="4" class="servicios">
+        <a href="{{route('servicios.create')}}">Nuevo Servicio</a>
+    </td>
+</tr>
 @endsection
